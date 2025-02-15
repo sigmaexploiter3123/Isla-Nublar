@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Species Classification - Isla Nublar</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 30px;
+    }
+    nav ul li a {
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #FFDD00;
+    }
+    .container {
+      padding: 120px 40px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .classification {
+      display: inline-block;
+      background: #333;
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+    .classification:hover {
+      transform: scale(1.05);
+    }
+    .classification a {
+      color: #FFDD00;
+      font-size: 1.5em;
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Isla Nublar</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="species.html">Species</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h1>Species Classification</h1>
+    <p>Select a category to explore the dinosaur species:</p>
+    <div class="classification">
+      <a href="herbivore.html">Herbivore</a>
+    </div>
+    <div class="classification">
+      <a href="carnivore.html">Carnivore</a>
+    </div>
+    <div class="classification">
+      <a href="omnivore.html">Omnivore</a>
+    </div>
+  </div>
+</body>
+</html>

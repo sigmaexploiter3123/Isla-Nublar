@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isla Nublar - Jurassic World</title>
+  <style>
+    body {
+      background: #111; /* Dark background */
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    
+    header h1 {
+      margin: 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 0 0;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    section {
+      padding: 80px 20px 20px;
+      margin-top: 60px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      margin: 20px;
+    }
+    
+    .hero {
+      background: url('jurassic-park-hero.jpg') no-repeat center center;
+      background-size: cover;
+      height: 600px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero h2 {
+      font-size: 48px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    
+    .attractions img,
+    .species img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    /* Species Section Styles */
+    .species-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    .species-item {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      min-width: 250px;
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .species-item h3 {
+      margin-bottom: 10px;
+    }
+    
+    .species-item a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border: 1px solid #777;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    
+    .species-item a:hover {
+      background-color: #777;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Isla Nublar – Jurassic World</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#attractions">Attractions</a></li>
+        <li><a href="#species">Species</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#visitor-info">Visitor Info</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section without any CTA Button -->
+  <div class="hero">
+    <h2>Explore the Wonders of Isla Nublar</h2>
+  </div>
+
+  <section id="about">
+    <h2>About Isla Nublar</h2>
+    <p>
+      Isla Nublar is home to some of the most incredible creatures ever discovered. Jurassic World brings these magnificent dinosaurs back to life through the marvels of genetic engineering. Come and experience the awe of nature’s greatest wonders!
+    </p>
+  </section>
+
+  <section id="attractions">
+    <h2>Park Attractions</h2>
+    <p>
+      Discover the heart-pounding adventures at Jurassic World. Our attractions include thrilling safari rides, dinosaur exhibits, and behind-the-scenes lab tours.
+    </p>
+    <div class="attractions">
+      <h3>Safari Rides</h3>
+      <img src="safari-ride.jpg" alt="Safari Ride">
+      <p>Take a ride through the safari and witness dinosaurs in their natural habitats!</p>
+    </div>
+    <div class="attractions">
+      <h3>Dinosaur Exhibits</h3>
+      <img src="dinosaur-exhibit.jpg" alt="Dinosaur Exhibit">
+      <p>Get an up-close look at the most famous dinosaurs, from the mighty T. rex to the gentle Brachiosaurus.</p>
+    </div>
+    <div class="attractions">
+      <h3>Lab Tours</h3>
+      <img src="lab-tour.jpg" alt="Lab Tour">
+      <p>See how our scientists bring dinosaurs back to life in our state-of-the-art genetic labs.</p>
+    </div>
+  </section>
+
+  <!-- New Species Section -->
+  <section id="species">
+    <h2>Dinosaur Species</h2>
+    <p>Explore our vast collection of dinosaur species, categorized by dietary habits. Click on a category below to learn more:</p>
+    <div class="species-container">
+      <div class="species-item">
+        <h3>Herbivores</h3>
+        <img src="herbivore.jpg" alt="Herbivores" style="max-width:100%; border-radius: 10px;">
+        <p><a href="herbivore.html">Explore Herbivores</a></p>
+      </div>
+      <div class="species-item">
+        <h3>Carnivores</h3>
+        <img src="carnivore.jpg" alt="Carnivores" style="max-width:100%; border-radius: 10px;">
+        <p><a href="carnivore.html">Explore Carnivores</a></p>
+      </div>
+      <div class="species-item">
+        <h3>Omnivores</h3>
+        <img src="omnivore.jpg" alt="Omnivores" style="max-width:100%; border-radius: 10px;">
+        <p><a href="omnivore.html">Explore Omnivores</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>Latest News</h2>
+    <p>
+      Stay up to date with all the exciting news about Isla Nublar and Jurassic World. Check back regularly for new developments and events!
+    </p>
+    <a href="news.html">Read More News</a>
+  </section>
+
+  <section id="visitor-info">
+    <h2>Visitor Information</h2>
+    <p>
+      Everything you need to plan your visit, from ticket prices to schedules, is right here. Get all the details before your adventure begins!
+    </p>
+    <a href="visitor-info.html">Plan Your Visit</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      If you have any questions or need further information, please feel free to reach out!
+    </p>
+    <a href="contact-news.html">Contact Us</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Isla Nublar – Jurassic World | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
+
+
