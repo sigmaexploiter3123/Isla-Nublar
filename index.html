@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Isla Nublar - Jurassic World</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      background: #111; /* Dark background */
+      background: #000; /* Solid black background */
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -14,7 +16,7 @@
     }
     
     header {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.9);
       padding: 20px;
       text-align: center;
       position: fixed;
@@ -25,6 +27,8 @@
     
     header h1 {
       margin: 0;
+      font-weight: bold; /* Bold text */
+      font-size: 2.5rem; /* Increased font size */
     }
     
     nav ul {
@@ -42,15 +46,31 @@
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 1.2rem; /* Increased font size */
+      font-weight: bold; /* Bold buttons */
+      transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover {
+      background-color: #ffcc00; /* Highlight color on hover */
+      color: #000; /* Change text color on hover */
+      transform: scale(1.1); /* Scale effect on hover */
     }
     
     section {
       padding: 80px 20px 20px;
       margin-top: 60px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.9); /* Darker background for sections */
       border-radius: 10px;
       margin: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+      transition: transform 0.3s ease; /* Section scale effect */
+    }
+    
+    section:hover {
+      transform: scale(1.02); /* Scale effect on hover */
     }
     
     .hero {
@@ -63,11 +83,13 @@
       align-items: center;
       text-align: center;
       position: relative;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8); /* Inner shadow */
     }
     
     .hero h2 {
-      font-size: 48px;
+      font-size: 3rem; /* Increased font size */
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      font-weight: bold; /* Bold text */
     }
     
     .attractions img,
@@ -75,16 +97,23 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
+      transition: transform 0.3s ease; /* Image scale effect */
+    }
+    
+    .attractions img:hover,
+    .species img:hover {
+      transform: scale(1.05); /* Scale effect on hover */
     }
     
     .footer {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.9);
       color: white;
       text-align: center;
       padding: 20px;
       position: relative;
       bottom: 0;
       width: 100%;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
     }
     
     /* Species Section Styles */
@@ -102,25 +131,35 @@
       min-width: 250px;
       margin: 10px;
       text-align: center;
+      transition: transform 0.3s ease; /* Scale effect */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    }
+    
+    .species-item:hover {
+      transform: translateY(-5px); /* Lift effect on hover */
     }
     
     .species-item h3 {
       margin-bottom: 10px;
+      font-weight: bold; /* Bold text */
+      font-size: 1.5rem; /* Increased font size */
     }
     
     .species-item a {
       color: white;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 1rem; /* Increased font size */
       border: 1px solid #777;
       padding: 8px 12px;
       border-radius: 5px;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease; /* Button effects */
+      font-weight: bold; /* Bold buttons */
     }
     
     .species-item a:hover {
-      background-color: #777;
-      color: white;
+      background-color: #ffcc00; /* Highlight color on hover */
+      color: #000; /* Change text color on hover */
+      transform: scale(1.1); /* Scale effect on hover */
     }
   </style>
 </head>
@@ -183,17 +222,17 @@
       <div class="species-item">
         <h3>Herbivores</h3>
         <img src="herbivore.jpg" alt="Herbivores" style="max-width:100%; border-radius: 10px;">
-        <p><a href="herbivore.html">Explore Herbivores</a></p>
+        <p><a href='/herbivore'>Explore Herbivores</a></p>
       </div>
       <div class="species-item">
         <h3>Carnivores</h3>
         <img src="carnivore.jpg" alt="Carnivores" style="max-width:100%; border-radius: 10px;">
-        <p><a href="carnivore.html">Explore Carnivores</a></p>
+        <p><a href='/carnivore'>Explore Carnivores</a></p>
       </div>
       <div class="species-item">
         <h3>Omnivores</h3>
         <img src="omnivore.jpg" alt="Omnivores" style="max-width:100%; border-radius: 10px;">
-        <p><a href="omnivore.html">Explore Omnivores</a></p>
+        <p><a href='/omnivore'>Explore Omnivores</a></p>
       </div>
     </div>
   </section>
@@ -211,7 +250,7 @@
     <p>
       Everything you need to plan your visit, from ticket prices to schedules, is right here. Get all the details before your adventure begins!
     </p>
-    <a href="visitor-info.html">Plan Your Visit</a>
+    <a href='/visitor-info'>Plan Your Visit</a>
   </section>
 
   <section id="contact">
@@ -219,7 +258,7 @@
     <p>
       If you have any questions or need further information, please feel free to reach out!
     </p>
-    <a href="contact-news.html">Contact Us</a>
+    <a href='/contact-news'>Contact Us</a>
   </section>
 
   <footer class="footer">
@@ -228,5 +267,8 @@
 
 </body>
 </html>
+
+
+
 
 
